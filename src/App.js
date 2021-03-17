@@ -34,7 +34,7 @@ App on Heroku
         <img src={logo} style={{ width: "18rem" }} alt="" />
       </header>
       <Add reviews={reviews} setReviews={setReviews} />
-      <div className="reviews1">
+     <div style="margin-left:50px; margin-right:50px;">  <div className="reviews">
         {reviews.map((item) => {
           return (
             <div className="review">
@@ -44,6 +44,7 @@ App on Heroku
               <Edit id={item.id} reviews={reviews} setReviews={setReviews} />
               <Delete id={item.id} reviews={reviews} setReviews={setReviews} />
             </div>
+            </div> 
           );
         })}
       </div>
