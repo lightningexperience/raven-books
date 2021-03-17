@@ -82,4 +82,5 @@ input {
 
 .reviews {
   display: flex;
+  padding:50px;
 }
