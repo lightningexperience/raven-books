@@ -10,7 +10,7 @@ function App() {
   const [reviews, setReviews] = useState([]);
 
   const getReviews = () => {
-    axios.get("https://ravenbooks.herokuapp.com/reviews").then((res) => {
+    axios.get("https://jnkbookreview.herokuapp.com/reviews").then((res) => {
       setReviews(res.data);
     });
   };
