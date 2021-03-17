@@ -5,7 +5,7 @@ import axios from "axios";
 export default function Delete(props) {
   const deleteReview = () => {
     axios
-      .delete(`https://ravenbooks.herokuapp.com/reviews/${props.id}`)
+      .delete(`https://jnkbookreview.herokuapp.com/reviews/${props.id}`)
       .then((res) => {
         props.setReviews(
           props.reviews.filter((item) => {
