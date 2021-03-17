@@ -38,9 +38,9 @@ App on Heroku
         {reviews.map((item) => {
           return (
             <div className="review">
-              <h3>Title: {item.book_title}</h3>
-              <h3>Review: {item.book_review}</h3>
-              <h3>Rating: {item.book_rating}</h3>
+              <h3>Contact Name: {item.book_title}</h3>
+              <h3>Details: {item.book_review}</h3>
+              <h3>Lead Rating: {item.book_rating}</h3>
               <Edit id={item.id} reviews={reviews} setReviews={setReviews} />
               <Delete id={item.id} reviews={reviews} setReviews={setReviews} />
             </div>
