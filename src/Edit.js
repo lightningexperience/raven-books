@@ -12,7 +12,7 @@ export default function Edit(props) {
   };
 
   const updateReview = (data) => {
-    axios.put("https://ravenbooks.herokuapp.com/reviews", data).then((res) => {
+    axios.put("https://jnkbookreview.herokuapp.com/reviews", data).then((res) => {
       props.setReviews(
         props.reviews.map((item) => {
           return item.id === props.id
