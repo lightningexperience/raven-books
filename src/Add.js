@@ -23,7 +23,7 @@ export default function Add(props) {
 
   return (
     <form className="add-review" onSubmit={handleSubmit(onSubmit)}>
-      <h4>Add Review</h4>
+      <h4>Add Lead</h4>
       <input
         type="text"
         placeholder="Book Title"
