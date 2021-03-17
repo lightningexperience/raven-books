@@ -30,16 +30,16 @@ export default function Edit(props) {
 
   return (
     <form className="add-review" onSubmit={handleSubmit(onSubmit)}>
-      <h4>Edit Review</h4>
+      <h4>Edit Lead</h4>
       <input
         type="text"
-        placeholder="Review"
+        placeholder="Details"
         name="book_review"
         ref={register({ required: true, maxLength: 450 })}
       />
       <input
         type="number"
-        placeholder="Rating"
+        placeholder="LeadRating"
         name="book_rating"
         ref={register({ required: true, max: 5, min: 0 })}
       />
