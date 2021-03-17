@@ -29,8 +29,7 @@ function App() {
             padding: "1rem",
           }}
         >
-          This is a demo for building a CRUD MySQL Node.js App tutorial. Still
-          in Progress. Tutorial will be available on lo-victoria.com
+App on Heroku
         </p>
         <img src={logo} style={{ width: "18rem" }} alt="" />
       </header>
