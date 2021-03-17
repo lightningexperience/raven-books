@@ -29,22 +29,22 @@ function App() {
             padding: "1rem",
           }}
         >
-App on Heroku
+          This is a demo for building a CRUD MySQL Node.js App tutorial. Still
+          in Progress. Tutorial will be available on lo-victoria.com
         </p>
         <img src={logo} style={{ width: "18rem" }} alt="" />
       </header>
       <Add reviews={reviews} setReviews={setReviews} />
-     <div style="margin-left:50px; margin-right:50px;">  <div className="reviews">
+      <div className="reviews">
         {reviews.map((item) => {
           return (
             <div className="review">
-              <h3>Contact Name: {item.book_title}</h3>
+              <h3>Contact: {item.book_title}</h3>
               <h3>Details: {item.book_review}</h3>
-              <h3>Lead Rating: {item.book_rating}</h3>
+              <h3>Lead-Rating: {item.book_rating}</h3>
               <Edit id={item.id} reviews={reviews} setReviews={setReviews} />
               <Delete id={item.id} reviews={reviews} setReviews={setReviews} />
             </div>
-            </div> 
           );
         })}
       </div>
