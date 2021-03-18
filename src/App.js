@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     getReviews();
-  }, []);
+  }, [reviews]);
 
   return (
     <div className="App">
