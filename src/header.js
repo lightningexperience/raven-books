@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 
-import './Header.css';
+import './header.css';
 
 const HeaderLink = ({ page, selected }) => {
   const title = page.charAt(0).toUpperCase() + page.slice(1);
