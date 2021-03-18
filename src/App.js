@@ -7,6 +7,9 @@ import Delete from "./Delete";
 import axios from "axios";
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+const BrowserRouter = require("react-router-dom").BrowserRouter;
+const Route = require("react-router-dom").Route;
+const Link = require("react-router-dom").Link;
 
 
 import Header from './header.js';
