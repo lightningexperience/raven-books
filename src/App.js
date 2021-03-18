@@ -15,14 +15,25 @@ function App() {
     });
   };
 
+  useEffect(() => {
+    getReviews();
+  }, [reviews]);
 
   return (
     <div className="App">
       <header className="App-header">
-        <p style={{backgroundColor: "cornflowerblue", marginTop: 0,padding: "1rem"}}>Salesforce Workshop for end-to-end Event Driven Architecture  </p>
+        <p
+          style={{
+            backgroundColor: "cornflowerblue",
+            marginTop: 0,
+            padding: "1rem",
+          }}
+        >
+          Salesforce Workshop for end-to-end Event Driven Architecture 
+        </p>
         <img src={logo} style={{ width: "18rem" }} alt="" />
-      </header> 
-    <Add reviews={reviews} setReviews={setReviews} />
+      </header>
+      <Add reviews={reviews} setReviews={setReviews} />
       <div className="reviews">
         {reviews.map((item) => {
           return (
