@@ -6,6 +6,36 @@ import Edit from "./Edit";
 import Delete from "./Delete";
 import axios from "axios";
 
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+
+import Header from './Header';
+
+const Home = () => (
+  <div>
+    <h2>Home</h2>
+  </div>
+);
+
+const About = () => (
+  <div>
+    <h2>About</h2>
+  </div>
+);
+
+const Contact = () => (
+  <div>
+    <h2>Contact</h2>
+  </div>
+);
+
+
+
+
+
+
+
+
 function App() {
   const [reviews, setReviews] = useState([]);
 
@@ -20,6 +50,18 @@ function App() {
   }, [reviews]);
 
   return (
+    <div className='App'>
+      <Router>
+        <Route path='/:page' component={Header} />
+        <Route exact path='/' component={Header} />
+
+        <Route exact path='/' component={Home} />
+        <Route exact path='/home' component={Home} />
+        <Route exact path='/about' component={About} />
+        <Route exact path='/contact' component={Contact} />
+      </Router>
+    </div>
+    
     <div className="App">
       <header className="App-header">
         <p
