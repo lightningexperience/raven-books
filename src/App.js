@@ -6,33 +6,6 @@ import Edit from "./Edit";
 import Delete from "./Delete";
 import axios from "axios";
 
-
-const BrowserRouter = require("react-router-dom").BrowserRouter;
-const Route = require("react-router-dom").Route;
-const Link = require("react-router-dom").Link;
-
-
-import Header from './header.js';
-
-const Home = () => (
-  <div>
-    <h2>Home</h2>
-  </div>
-);
-
-const About = () => (
-  <div>
-    <h2>About</h2>
-  </div>
-);
-
-const Contact = () => (
-  <div>
-    <h2>Contact</h2>
-  </div>
-);
-
-
 function App() {
   const [reviews, setReviews] = useState([]);
 
@@ -47,20 +20,19 @@ function App() {
   }, [reviews]);
 
   return (
-    
     <div className="App">
-      <header className="App-header"> </header>
-    
-       <Router>
-        <Route path='/:page' component={Header} />
-        <Route exact path='/' component={Header} />
-
-        <Route exact path='/' component={Home} />
-        <Route exact path='/home' component={Home} />
-        <Route exact path='/about' component={About} />
-        <Route exact path='/contact' component={Contact} />
-      </Router>
-    
+      <header className="App-header">
+        <p
+          style={{
+            backgroundColor: "cornflowerblue",
+            marginTop: 0,
+            padding: "1rem",
+          }}
+        >
+          Salesforce Workshop for end-to-end Event Driven Architecture 
+        </p>
+        <img src={logo} style={{ width: "18rem" }} alt="" />
+      </header>
       <Add reviews={reviews} setReviews={setReviews} />
       <div className="reviews">
         {reviews.map((item) => {
