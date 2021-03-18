@@ -30,12 +30,6 @@ const Contact = () => (
 );
 
 
-
-
-
-
-
-
 function App() {
   const [reviews, setReviews] = useState([]);
 
@@ -50,8 +44,11 @@ function App() {
   }, [reviews]);
 
   return (
-    <div className='App'>
-      <Router>
+    
+    <div className="App">
+      <header className="App-header"> </header>
+    
+       <Router>
         <Route path='/:page' component={Header} />
         <Route exact path='/' component={Header} />
 
@@ -60,21 +57,7 @@ function App() {
         <Route exact path='/about' component={About} />
         <Route exact path='/contact' component={Contact} />
       </Router>
-    </div>
     
-    <div className="App">
-      <header className="App-header">
-        <p
-          style={{
-            backgroundColor: "cornflowerblue",
-            marginTop: 0,
-            padding: "1rem",
-          }}
-        >
-          Salesforce Workshop for end-to-end Event Driven Architecture 
-        </p>
-        <img src={logo} style={{ width: "18rem" }} alt="" />
-      </header>
       <Add reviews={reviews} setReviews={setReviews} />
       <div className="reviews">
         {reviews.map((item) => {
