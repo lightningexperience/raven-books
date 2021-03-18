@@ -9,7 +9,7 @@ import axios from "axios";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
-import Header from 'Header';
+import Header from './Header.js';
 
 const Home = () => (
   <div>
